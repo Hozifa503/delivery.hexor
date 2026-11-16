@@ -1,0 +1,66 @@
+/*
+  Design tokens - every color, font, size and shadow used on the website.
+  Colors and fonts are taken from the Canva Home Page design.
+  Change a value here and it updates everywhere.
+*/
+:root {
+  /* Green identity (hero button, "shops & restaurants" background) */
+  --color-green-dark: #5b9a2e;
+  --color-green-olive: #8dab1c;
+  --color-green-button-start: #5a8c2c;
+  --color-green-button-end: #92b01f;
+  --color-green-light: #7ed957;
+
+  /* Text and backgrounds */
+  --color-text-dark: #111111;
+  --color-text-light: #ffffff;
+  --color-page-bg: #f4f7ec;
+  --color-footer-bg: #2f3a22;
+
+  /* Navbar (translucent dark pill over the photo) */
+  --color-navbar-bg: rgba(58, 60, 50, 0.72);
+  --color-navbar-bg-open: rgba(44, 46, 38, 0.96);
+
+  /* Dark layers on top of the hero photo */
+  --color-overlay-top: rgba(0, 0, 0, 0.1);
+  --color-overlay-middle: rgba(0, 0, 0, 0.2);
+  --color-overlay-bottom: rgba(0, 0, 0, 0.6);
+
+  --gradient-green: linear-gradient(100deg, var(--color-green-dark), var(--color-green-olive));
+  --gradient-green-button: linear-gradient(90deg, var(--color-green-button-start), var(--color-green-button-end));
+
+  /* Fonts (loaded from Google Fonts in index.html) */
+  --font-title: 'Barlow Condensed', 'Arial Narrow', sans-serif; /* heavy condensed sans */
+  --font-display: 'Orbitron', 'Segoe UI', sans-serif; /* squared techno style */
+  --font-serif: 'EB Garamond', Georgia, serif; /* elegant body serif */
+  --font-ui: 'Montserrat', 'Segoe UI', Arial, sans-serif; /* navigation, buttons, forms */
+
+  /* Shape */
+  --radius-pill: 999px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.18);
+  --shadow-navbar: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+
+  /* Layout */
+  --container-width: 68rem;
+  --navbar-top: 1.25rem;
+  --navbar-height: 3.6rem;
+  /* Space reserved at the top of a page so the floating navbar never covers content */
+  --page-top-space: calc(var(--navbar-top) + var(--navbar-height) + var(--space-5));
+
+  --transition-fast: 0.2s ease;
+}

@@ -1,0 +1,109 @@
+/* Navbar: a floating, translucent dark pill (matches the Canva design). */
+
+.navbar {
+  position: fixed;
+  top: var(--navbar-top);
+  left: var(--space-4);
+  right: var(--space-4);
+  z-index: 100;
+  background: var(--color-navbar-bg);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-navbar);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: var(--color-text-light);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--navbar-height);
+  padding: 0 var(--space-6) 0 var(--space-3);
+}
+
+/* ----- Brand (logo + school name) ----- */
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  text-decoration: none;
+}
+
+.navbar__logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.navbar__school-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar__school-tagline {
+  font-size: 0.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ----- Links ----- */
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast);
+}
+
+.navbar__link:hover {
+  opacity: 1;
+}
+
+/* The page you are on is bold, like "HOME" in the design */
+.navbar__link--active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* ----- Hamburger button (only shown on small screens, see responsive.css) ----- */
+
+.navbar__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}

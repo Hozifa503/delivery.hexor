@@ -1,0 +1,77 @@
+/* Breakpoints. This file is imported last so these rules win over the base styles. */
+
+/* ---------- Tablets and phones: switch to the hamburger menu ---------- */
+@media (max-width: 820px) {
+  .navbar__inner {
+    padding-right: var(--space-3);
+  }
+
+  .navbar__toggle {
+    display: inline-flex;
+  }
+
+  /* Links become a dropdown panel under the navbar pill */
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-2);
+    background: var(--color-navbar-bg-open);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-navbar);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+  }
+
+  .navbar__link--active {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 480px) {
+  :root {
+    --navbar-top: 0.75rem;
+    --navbar-height: 3.25rem;
+  }
+
+  .navbar {
+    left: var(--space-2);
+    right: var(--space-2);
+  }
+
+  .navbar__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar__school-name {
+    font-size: 1rem;
+  }
+
+  .btn {
+    min-width: 12rem;
+  }
+
+  .hero {
+    padding-inline: var(--space-4);
+  }
+
+  .shops {
+    padding-inline: var(--space-4);
+  }
+}

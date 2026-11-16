@@ -1,0 +1,21 @@
+/*
+  Styles for the React wrapper around the About page.
+  The About page itself (public/about/about.css) is NOT touched: it lives inside an
+  iframe, so its styles cannot leak into the website and ours cannot leak into it.
+*/
+
+.about-page {
+  padding-top: var(--page-top-space);
+}
+
+.about-page__frame {
+  display: block;
+  width: 100%;
+  border: 0;
+  /* Never shorter than the visible screen; the real height is set from the About page's content */
+  min-height: 60vh;
+}
+
+.about-page__message {
+  padding: 0 var(--space-5) var(--space-10);
+}

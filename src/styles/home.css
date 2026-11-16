@@ -1,0 +1,119 @@
+/* Home page: hero section + "shops & restaurants" section. */
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: var(--page-top-space) var(--space-5) var(--space-8);
+  text-align: center;
+  color: var(--color-text-light);
+  /* Colour first (shown if the photo is missing), then the photo with a dark gradient on top */
+  background-color: var(--color-green-dark);
+  background-image:
+    linear-gradient(
+      to bottom,
+      var(--color-overlay-top) 0%,
+      var(--color-overlay-middle) 55%,
+      var(--color-overlay-bottom) 100%
+    ),
+    url('/assets/school-cover.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Title + tagline sit in the middle of the space above the button */
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(3.4rem, 9vw, 7.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero__tagline {
+  margin: 0;
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- "shops & restaurants" section ---------- */
+
+.shops {
+  padding: var(--space-10) var(--space-5) var(--space-12);
+  color: var(--color-text-dark);
+  background: var(--gradient-green);
+}
+
+.shops__block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+/* The heading has a thin black line above-left and another below-right */
+.shops__heading-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.shops__heading-wrap::before,
+.shops__heading-wrap::after {
+  content: '';
+  position: absolute;
+  width: 59%;
+  height: 2px;
+  background: var(--color-text-dark);
+}
+
+.shops__heading-wrap::before {
+  top: 0;
+  left: 0;
+}
+
+.shops__heading-wrap::after {
+  bottom: 0;
+  right: 0;
+}
+
+.shops__heading {
+  margin: 0;
+  padding: 0.3em 0 0.35em 0.5em;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 4.6vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.shops__text {
+  max-width: 24em;
+  margin: var(--space-5) 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 3.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* Button is centered under the left-aligned text, as in the design */
+.shops__cta {
+  align-self: center;
+  margin-top: var(--space-10);
+}

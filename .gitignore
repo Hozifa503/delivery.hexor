@@ -1,0 +1,14 @@
+# Dependencies and build output
+node_modules
+dist
+
+# Secrets - never commit these
+.env
+.env.*
+!.env.example
+
+# Tool folders and system files
+.vercel
+supabase/.temp
+.DS_Store
+*.log
